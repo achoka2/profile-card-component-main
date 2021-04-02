@@ -3,36 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <link rel="stylesheet" href="/style.css" type="style/css" />
 
     <title>Frontend Mentor | Profile card component</title>
   </head>
+<style>
+  * {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+ background-color: hsl(185, 75%, 39%);
+ text-align: center;
+}
+      .container {
+    
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 30vh;
+    left:500px;
+background-color: white;
+}
+#profile{
+   height: 100px;
+   width: 100px; 
+   border-radius: 50px;
+  
+}
+.bg-color{
+border-radius:10px 10px 0px 0px;
+margin:0px 0px 10px 0px;
+background: url(/images/bg-pattern-card.svg);
+padding:50px;
+}
+.stats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.item-1,.item-2,.item-3{
+  padding: 50px;
+
+}
+.gray{
+  color: hsl(0, 0%, 59%);
+}
+.main{
+  font-weight: bold;
+  font-size: 23px;
+}
+p{
+  line-height: 30px;
+}
+.attribution{
+  position: absolute;
+  top:600px;
+  left:500px;
+  font-weight: bold;
+}
+</style>
   <body>
+    <div class="container">
+      <div class="bg-color"></div>
 
-    <img src="/images/image-victor.jpg" alt=victor/>
-    <p>Victor Crest 26</p>
-    <p class="city">London</p>
-<hr>
-    <div class="stats">
-      <div class="item-1"><p>80K</p> <p>Followers</p></div>
+      <img id="profile" src="/images/image-victor.jpg" alt="victor" />
+      <p class="main">Victor Crest <span class="gray">26</span></p>
+      <p class="gray">London</p>
+      <hr />
+      <div class="stats">
+        <div class="item-1">
+          <p class="main">80K</p>
+          <p class="gray">Followers</p>
+        </div>
 
-      <div class="item-2"><p></p>803K</p> <p>Likes</p></div>
+        <div class="item-2">
+          <p class="main">803K</p>
+          <p class="gray">Likes</p>
+        </div>
 
-      <div class="item-3"><p></p>1.4K</p> Photos</p></div>
+        <div class="item-3">
+          <p class="main">1.4K</p>
+          <p class="gray">Photos</p>
+        </div>
+      </div>
     </div>
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Achoka</a>.
     </div>
-    <div>new</div>
   </body>
 </html>
